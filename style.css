@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+body {
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: "Kumbh Sans";
+  font-weight: 400;
+  font-size: 12px;
+}
+
+#card {
+  width: 900px;
+  display: flex;
+  flex-basis: 50%;
+  background-color: white;
+  border-radius: 30px;
+  margin: 150px auto;
+  text-align: center;
+  position: relative;
+}
+
+#img {
+  text-align: left;
+  overflow: hidden;
+}
+
+#img2 {
+  position: absolute;
+  top: 175px;
+  left: -95px;
+}
+
+#img1 {
+  background-image: url(images/bg-pattern-desktop.svg);
+  background-position: 100% 65%;
+  padding: 40px 0px 40px 0px;
+  position: relative;
+  top: 0px;
+  right: 90px;
+  object-fit: contain;
+}
+#img3 {
+  display: none;
+}
+
+#text {
+  text-align: start;
+  padding: 30px 0px 0px 0px;
+  width: 320px;
+}
+
+#faq-title {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: block;
+  cursor: pointer;
+  color: hsl(237, 12%, 33%);
+  padding: 10px 0px;
+  font-size: 12px;
+}
+
+label:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+input + label + .content {
+  display: none;
+}
+
+input:checked + label + .content {
+  display: block;
+}
+
+input:checked + label {
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: hsl(240, 5%, 91%);
+}
+
+.content {
+  color: hsl(240, 6%, 50%);
+  line-height: 17px;
+}
+
+svg {
+  position: absolute;
+  right: 13%;
+}
+
+input:checked + label > svg {
+  transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 376px) {
+
+  body {
+      height: 200vh;;
+  }
+
+  #card {
+    width: 348px;
+    text-align: center;
+    position: relative;
+    display: block;
+    margin: 145px 5px 0px 5px;
+  }
+
+  #img {
+    display: none;
+  }
+
+  #img3 {
+    display: inline-block;
+    background-image: url(images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: 102% 100%;
+    margin: -106px 29px 0px 0px;
+    padding: 0px 0px 21px 0px;
+  }
+
+  #text {
+    text-align: start;
+    padding: 0px 0px 35px 0px;
+    margin: 22px 22px 30px 22px;
+    max-width: 300px;
+  }
+
+  #faq-title {
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    padding-left: 14px;
+  }
+
+  svg {
+    position: absolute;
+    right: 8%;
+  }
+
+  .attribution {
+      padding-top: 40px;
+  }
+}
